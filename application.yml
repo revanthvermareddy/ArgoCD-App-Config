@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: webapp-argo-application
+  name: myapp-argo-application
   namespace: argocd
 spec:
   project: default
@@ -9,10 +9,10 @@ spec:
   source:
     repoURL: https://github.com/revanthvermareddy/argocd-app-config.git
     targetRevision: HEAD
-    path: helm
+    path: dev
   destination: 
     server: https://kubernetes.default.svc
-    namespace: webapp
+    namespace: myapp
 
   syncPolicy:
     syncOptions:
