@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/revanthvermareddy/argocd-app-config.git
     targetRevision: HEAD
-    path: helm/webapp
+    path: helm
   destination: 
     server: https://kubernetes.default.svc
     namespace: webapp
