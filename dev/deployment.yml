@@ -12,8 +12,18 @@ spec:
       labels:
         app: myapp
     spec:
+      automountServiceAccountToken: false
       containers:
       - name: myapp
         image: revanthvermareddy/101-todo-app:latest
         ports:
         - containerPort: 3000
+        resources:
+          limits:
+            cpu: "500m"
+            memory: "512Mi"
+            ephemeral-storage: "1Gi"
+          requests:
+            cpu: "250m"
+            memory: "256Mi"
+            ephemeral-storage: "500Mi"
